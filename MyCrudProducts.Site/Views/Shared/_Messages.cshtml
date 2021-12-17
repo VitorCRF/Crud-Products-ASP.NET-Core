@@ -1,0 +1,29 @@
+﻿<div class="margin-top-15">
+    @if (TempData["success-message"] != null)
+    {
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+            <span id="temp-success">@Html.Raw(TempData["success-message"])</span>
+        </div>
+    }
+
+    @if (TempData["error-message"] != null)
+    {
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+            <span id="temp-error">@Html.Raw(TempData["error-message"])</span>
+        </div>
+    }
+
+    @*Mensagens a serem exibidas via javascript/ajax/jquery*@
+
+    <div class="alert alert-success alert-dismissable" style="display:none" id="alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+        <span id="success-message"></span>
+    </div>
+
+    <div class="alert alert-danger alert-dismissable" style="display:none" id="alert-error">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+        <span id="error-message"></span>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+﻿
+@model MyCrudProducts.Site.Models.Product
+@{
+    ViewData["Title"] = "GetProduct";
+}
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .heading {
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: underline;
+    }
+
+    .imw {
+        width: 65%;
+        position: relative;
+    }
+
+    .product {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 9;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #000;
+    }
+
+    .ccc:hover .overlay {
+        opacity: 0.7;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .cc1 {
+        width: 82%;
+        background: #fff;
+        color: #000;
+        padding: 4px 8px;
+        border: 1px solid #000;
+        height: 40px;
+        border-radius: 7px;
+    }
+
+    .card {
+        border: 1px solid #00000036;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .modal-body-main {
+        overflow-y: auto;
+    }
+
+    .modal-dialog-main {
+        overflow-y: initial !important;
+        margin: 50px auto !important;
+    }
+
+    .modal-close {
+        cursor: pointer;
+    }
+</style>
+<form method="post">
+    <div class="row col-md-12">
+        <div class="col-md-4">
+            <label for="search">Buscar produto</label>
+            <input class="form-control" placeholder="Código do produto..." name="id" />
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <button class="btn btn-info" id="btnSearchProduct" type="submit" style="margin-top:33px"><i class="fa fa-search"></i>&nbsp;Filtrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@if (Model != null)
+{
+    <div class="container">
+        <div class="row product">
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <input type="hidden" />
+                        <h5 class="text-center">@Model.Name</h5>
+                        <p class="text-center">R$@Model.Price</p>
+                        <p class="text-center">Estoque: @Model.Stock</p>
+                        <p class="text-center">Código: @Model.ProductId</p>
+                        <p class="text-center"><a asp-action="UpdateProduct" asp-route-id="@Model.ProductId" class="btn btn-sm btn-primary">Editar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row product">
+            <div class="col-md-4">
+                <a asp-action="Index" class="btn btn-sm btn-success">Retornar</a>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="row product">
+            <div class="col-md-4">
+                <h3>Sem resultado</h3>
+            </div>
+        </div>
+        <div class="row product">
+            <div class="col-md-4">
+                <a asp-action="Index" class="btn btn-sm btn-success">Retornar</a>
+            </div>
+        </div>
+    </div>
+}

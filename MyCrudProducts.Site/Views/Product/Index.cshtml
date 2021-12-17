@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Todos os Produtos";
+}
+
+<style>
+   
+</style>
+
+<div class="row col-md-12">
+    <div class="col-md-10">
+        <div class="col-md-4">
+            <div class="form-group">
+                <a class="btn btn-info" asp-action="GetProduct" id="btnSearchProduct" style="margin-top:33px"><i class="fa fa-search"></i>&nbsp;Filtrar</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-sm btn-primary open-products-modal">Adicionar produto</button>
+    </div>
+</div>
+<div class="container">
+    <div class="row product">
+        @foreach (var x in Model)
+        {
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <input type="hidden" />
+                        <h5 class="text-center">@x.Name</h5>
+                        <p class="text-center">R$@x.Price</p>
+                        <p class="text-center">Estoque: @x.Stock</p>
+                        <p class="text-center">Código: @x.ProductId</p>
+                        <p class="text-center"><a asp-action="UpdateProduct" asp-route-id="@x.ProductId" class="btn btn-sm btn-primary">Editar</a></p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="modal" id="products-modal" tabindex="-1" role="dialog" aria-labelledby="products-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-main" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-md-10">
+                    <h4 class="modal-title" id="products-modalLabel">Cadastro de produto</h4>
+                </div>
+                <div class="col-md-2 ">
+                    <a class="modal-close float-right" data-dismiss="modal"><i class="fa fa-close" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="modal-body modal-body-main">
+                <div>
+                    <div class="form-group">
+                        <form asp-action="AddProduct" method="post">
+                            <div class="form-group">
+                                <label for="Name">Nome:</label>
+                                <input class="form-control" id="name" name="Name" placeholder="Nome do produto" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Price">Preço:</label>
+                                <input class="form-control" id="price" name="Price" placeholder="Preço final" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Stock">Estoque:</label>
+                                <input class="form-control" id="stock" name="Stock" placeholder="Quantidade disponível" required />
+                            </div>
+                            <div class="text-center panel-body">
+                                <button type="submit" id="btnCreateProduct" class="btn btn-sm btn-primary">Novo produto</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        /*Chamada para o modal do cadastro de produtos*/
+        $(".open-products-modal").click(function () {
+            $('#products-modal').modal('show');
+        });
+
+        /*Requisição POST para cadastro de produto*/
+        $("#btnCreateProduct").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Product/AddProduct" + "?name=" + $("#name").val() + "&price=" + $("#price").val() + "stock=" + $("#stock").val(),
+                contentType: "application/json",
+                success: function (response) {
+                },
+                error: function (response) {
+                }
+            });
+        });
+    });
+
+
+</script>

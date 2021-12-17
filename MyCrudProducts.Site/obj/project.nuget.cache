@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vEmSxustDAJiiAWZDdw2kjkFnrUfzsB63TAagUMS8ILfueN5rMntrszHofsHbVx2II2HNcGQ37Wf8C/58Pi2VQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts.Site\\MyCrudProducts.Site.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vitor\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,30 @@
+﻿@model MyCrudProducts.Site.Models.Product
+@{
+    ViewData["Title"] = "UpdateProduct";
+}
+<div class="row col-md-12 justify-content-center">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="ProductId">Código do Produto</label>
+                <input class="form-control" asp-for="ProductId" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Name">Nome</label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Price">Preço</label>
+                <input class="form-control" asp-for="Price" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Stock">Estoque</label>
+                <input class="form-control" asp-for="Stock" />
+            </div>
+            <div class="text-center panel-body">
+                <button type="submit" class="btn btn-sm btn-success">Atualizar</button>
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
