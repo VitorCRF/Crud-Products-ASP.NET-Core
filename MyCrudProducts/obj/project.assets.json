@@ -8377,9 +8377,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\MyCrudProducts.WebApi.csproj",
-      "projectName": "MyCrudProducts.WebApi",
-      "projectPath": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\MyCrudProducts.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\MyCrudProducts.Api.csproj",
+      "projectName": "MyCrudProducts.Api",
+      "projectPath": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\MyCrudProducts.Api.csproj",
       "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\obj\\",
       "projectStyle": "PackageReference",

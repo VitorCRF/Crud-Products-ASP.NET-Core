@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gfMMvFe0BZ8R5NR71JMN9/aqFamRqx2khGCZWv+NAi5CJBJrWeKBBhObfziYSGh+4+Ux3DyA30ofIIW5JCSf+w==",
+  "dgSpecHash": "vP5D3LXrFGofC6xk42y0YkPAKTjopLCFaLdb7pZSClQvmTltI/e+JlGERnxki6ng1i0/IGEAJmpUOEuzZW+JmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\MyCrudProducts.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\Vitor\\source\\repos\\MyCrudProducts\\MyCrudProducts\\MyCrudProducts.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vitor\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Vitor\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.7\\microsoft.aspnetcore.mvc.razor.extensions.3.1.7.nupkg.sha512",

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCrudProducts.WebApi", "MyCrudProducts\MyCrudProducts.WebApi.csproj", "{59BF8D8C-820C-40EF-AFE8-2618C605413A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCrudProducts.Api", "MyCrudProducts\MyCrudProducts.Api.csproj", "{59BF8D8C-820C-40EF-AFE8-2618C605413A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCrudProducts.Site", "MyCrudProducts.Site\MyCrudProducts.Site.csproj", "{C2290249-0B1D-4C73-81BB-C991700F1ADF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCrudProducts.Site", "MyCrudProducts.Site\MyCrudProducts.Site.csproj", "{C2290249-0B1D-4C73-81BB-C991700F1ADF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
